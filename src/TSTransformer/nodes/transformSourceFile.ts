@@ -204,8 +204,5 @@ export function transformSourceFile(state: TransformState, node: ts.SourceFile) 
 		luau.list.unshift(statements, state.createRuntimeLibImport(node));
 	}
 
-	// add build information to the tree
-	luau.list.unshift(statements, luau.comment(`Compiled with roblox-ts v${COMPILER_VERSION}`));
-
 	return statements;
 }
